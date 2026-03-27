@@ -34,6 +34,13 @@ router.post('/register', async (req, res) => {
 
     }
     catch(err) {
+        // This is a duplicate key error code
+        if (err.code === 11000) {
+            // Parse the error to find the specific field that caused the issue
+            const field = Object.keys(err.keyPattern)[0]
+            console.error('Duplicate key error:', err.message)
+            return res.status(409).json({message: `Duplicate: That ${field} already exists.`})
+        }
         console.log(err.message)
         res.status(400).json({ message: err.message })
     }
