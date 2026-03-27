@@ -22,7 +22,8 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try{
-        const posts = await Post.find({author: req.user._id})
+        // this returns all posts, but can be restricted to the user's posts, {author: req.user._id}
+        const posts = await Post.find({})
             .sort({ createdAt: -1 })
             .populate('author', 'username')
 
