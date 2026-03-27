@@ -26,8 +26,6 @@ function Register() {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        console.log(form)
-
         try {
 
             // send the form data to our backend

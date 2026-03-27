@@ -22,7 +22,7 @@ function Feed() {
 
             }
             catch(err) {
-                console.dir(err.response.data.message)
+                console.dir(err)
             }
         }
         getData()
@@ -55,7 +55,7 @@ function Feed() {
 
             }
             catch(err) {
-                console.log(err.response.data.message)
+                console.dir(err)
             }
         }
         getData()
