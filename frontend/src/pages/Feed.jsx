@@ -38,7 +38,16 @@ function Feed() {
                     const { data } = await postClient.post('/', { title, body })
 
                     // add new post to our "posts" state
-                    setPosts([{...data,author:{username:user.username}}, ...posts])
+                    setPosts([
+                        {
+                            ...data,
+                            author:{
+                                username: user.username,
+                                _id: user._id
+                            }
+                        },
+                        ...posts
+                    ])
 
                     // reset the form fields
                     setTitle('')
@@ -84,7 +93,7 @@ function Feed() {
                 <button>Submit</button>
             </form>
 
-            {posts.map(post => <Post key={post._id} post={post} />)}
+            {posts.map(post => <Post key={post._id} post={post} setPosts={setPosts} />)}
 
         </div>
     )
