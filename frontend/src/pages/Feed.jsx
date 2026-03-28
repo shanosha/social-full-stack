@@ -93,6 +93,11 @@ function Feed() {
                 <button>Submit</button>
             </form>
 
+{(posts.length > 0) ?
+                <h2>Posts</h2>
+                :
+                <p>No posts currently!</p>
+            }
             {posts.map(post => <Post key={post._id} post={post} setPosts={setPosts} />)}
 
         </div>
