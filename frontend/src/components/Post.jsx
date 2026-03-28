@@ -18,6 +18,8 @@ function Post({ post, setPosts }) {
             alert(err.response.data.message)
         }
     }
+
+    console.log("p",post)
     
     return (
         <div className='post'>
