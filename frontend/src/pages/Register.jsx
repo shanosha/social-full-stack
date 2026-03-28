@@ -73,6 +73,7 @@ function Register() {
                     name="email"
                     type="email"
                     autoComplete="username"
+                    pattern=".+@.+\..+"
                     required
                 />
                 </div>
