@@ -98,7 +98,7 @@ function Feed() {
             </form>
 
             {(posts.length > 0) ?
-                <h2>Posts</h2>
+                <h2 className="sr-only">Posts</h2>
                 :
                 <p>No posts currently!</p>
             }
