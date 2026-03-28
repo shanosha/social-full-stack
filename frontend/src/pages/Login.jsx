@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { userClient } from "../clients/api"
 import { useUser } from "../context/UserContext"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function Login() {
 
@@ -79,6 +79,8 @@ function Login() {
                 </div>
 
                 <button>Login</button>
+
+                <p className="alternative">Don't have an account? <Link to="/register">Create an account!</Link></p>
             </form>
         </div>
     )

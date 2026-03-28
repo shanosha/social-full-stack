@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { userClient } from "../clients/api"
 import { useUser } from "../context/UserContext"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function Register() {
 
@@ -91,6 +91,8 @@ function Register() {
                 </div>
 
                 <button>Register</button>
+
+                <p className="alternative">Already have an account? <Link to="/login">Login!</Link></p>
             </form>
         </div>
     )
