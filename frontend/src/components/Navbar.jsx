@@ -7,7 +7,7 @@ function Navbar() {
 
     return (
         <nav>
-            {user && <p>Welcome {user.username}!</p>}
+            {user ? <p>Welcome {user.username}!</p> : <p>Full Stack Social Posts App</p>}
             <ul>
                 {user ?
                     <>
