@@ -60,6 +60,7 @@ function Register() {
                     id="username"
                     name="username"
                     type="text"
+                    autoComplete="nickname"
                     required
                 />
                 </div>

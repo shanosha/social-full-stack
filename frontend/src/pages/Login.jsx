@@ -73,7 +73,7 @@ function Login() {
                         id="password"
                         name="password"
                         type="password"
-                        autoComplete="new-password"
+                        autoComplete="current-password"
                         required
                     />
                 </div>
