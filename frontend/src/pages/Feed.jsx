@@ -70,30 +70,34 @@ function Feed() {
             <form onSubmit={handleSubmit}>
                 <h2>Leave a post here:</h2>
                 
-                <label htmlFor="title">Title:</label>
-                <input
-                    type="text"
-                    id="title"
-                    name="title"
-                    value={title}
-                    required={true}
-                    onChange={(e) => {setTitle(e.target.value)}}
-                />
+                <div className="form-row">
+                    <label htmlFor="title">Title:</label>
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        value={title}
+                        required={true}
+                        onChange={(e) => {setTitle(e.target.value)}}
+                    />
+                </div>
                 
-                <label htmlFor="body">Body:</label>
-                <textarea
-                    type="text"
-                    id="body"
-                    name="body"
-                    value={body}
-                    required={true}
-                    onChange={(e) => {setBody(e.target.value)}}
-                />
+                <div className="form-row">
+                    <label htmlFor="body">Body:</label>
+                    <textarea
+                        type="text"
+                        id="body"
+                        name="body"
+                        value={body}
+                        required={true}
+                        onChange={(e) => {setBody(e.target.value)}}
+                    />
+                </div>
 
                 <button>Submit</button>
             </form>
 
-{(posts.length > 0) ?
+            {(posts.length > 0) ?
                 <h2>Posts</h2>
                 :
                 <p>No posts currently!</p>

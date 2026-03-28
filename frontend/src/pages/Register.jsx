@@ -52,6 +52,7 @@ function Register() {
         <div>
             <h1>Register Page</h1>
             <form onSubmit={handleSubmit}>
+                <div className="form-row">
                 <label htmlFor="username">Username:</label>
                 <input
                     value={form.username}
@@ -61,7 +62,9 @@ function Register() {
                     type="text"
                     required
                 />
+                </div>
 
+                <div className="form-row">
                 <label htmlFor="email">Email:</label>
                 <input
                     value={form.email}
@@ -72,7 +75,9 @@ function Register() {
                     autoComplete="username"
                     required
                 />
+                </div>
 
+                <div className="form-row">
                 <label htmlFor="password">Password:</label>
                 <input
                     value={form.password}
@@ -83,6 +88,7 @@ function Register() {
                     autoComplete="new-password"
                     required
                 />
+                </div>
 
                 <button>Register</button>
             </form>

@@ -20,12 +20,13 @@ function Post({ post, setPosts }) {
     }
     
     return (
-        <div>
+        <div className='post'>
             <h3>{post.title}</h3>
-            <h4>by {post.author.username}</h4>
-            <div>{date.toLocaleDateString()} {date.toLocaleTimeString()}</div>
             <p>{post.body}</p>
-            {(post.author._id === user._id) && (<button onClick={handleDelete}>X</button>)}
+            <div className='metadata'>
+                <p>Posted by <strong className='author'>{post.author.username}</strong> on {date.toLocaleDateString()} at {date.toLocaleTimeString()}</p>
+            </div>
+            {(post.author._id === user._id) && (<button onClick={handleDelete}>Delete</button>)}
         </div>
     )
 }

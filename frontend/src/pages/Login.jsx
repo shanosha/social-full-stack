@@ -52,27 +52,31 @@ function Login() {
             <h1>Login Page</h1>
             <form onSubmit={handleSubmit}>
 
-                <label htmlFor="email">Email:</label>
-                <input
-                    value={form.email}
-                    onChange={handleChange}
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="username"
-                    required
-                />
+                <div className="form-row">
+                    <label htmlFor="email">Email:</label>
+                    <input
+                        value={form.email}
+                        onChange={handleChange}
+                        id="email"
+                        name="email"
+                        type="email"
+                        autoComplete="username"
+                        required
+                    />
+                </div>
 
-                <label htmlFor="password">Password:</label>
-                <input
-                    value={form.password}
-                    onChange={handleChange}
-                    id="password"
-                    name="password"
-                    type="password"
-                    autoComplete="new-password"
-                    required
-                />
+                <div className="form-row">
+                    <label htmlFor="password">Password:</label>
+                    <input
+                        value={form.password}
+                        onChange={handleChange}
+                        id="password"
+                        name="password"
+                        type="password"
+                        autoComplete="new-password"
+                        required
+                    />
+                </div>
 
                 <button>Login</button>
             </form>
